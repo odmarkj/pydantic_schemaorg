@@ -3,7 +3,7 @@ from decimal import Decimal
 from typing import Any, Optional, ForwardRef, List, Union
 
 from pydantic import BaseModel, Field, StrictBool, AnyUrl, StrictInt, StrictFloat
-from pydantic.typing import update_model_forward_refs
+from pydantic.v1.typing import update_model_forward_refs
 
 from pydantic_schemaorg.ISO8601.ISO8601Date import ISO8601Date
 from pydantic_schemaorg.__types__ import types
