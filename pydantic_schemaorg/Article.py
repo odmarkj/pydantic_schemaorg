@@ -17,7 +17,7 @@ class Article(CreativeWork):
     See: https://schema.org/Article
     Model depth: 3
     """
-    type_: str = Field(default="Article", alias='@type', const=True)
+    type_: str = Field(default="Article", alias='@type', frozen=True)
     backstory: Optional[Union[List[Union[str, 'Text', 'CreativeWork']], str, 'Text', 'CreativeWork']] = Field(
         default=None,
         description="For an [[Article]], typically a [[NewsArticle]], the backstory property provides"
