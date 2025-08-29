@@ -16,7 +16,7 @@ class BioChemEntity(Thing):
     See: https://schema.org/BioChemEntity
     Model depth: 2
     """
-    type_: str = Field(default="BioChemEntity", alias='@type', const=True)
+    type_: str = Field(default="BioChemEntity", alias='@type', frozen=True)
     bioChemSimilarity: Optional[Union[List[Union['BioChemEntity', str]], 'BioChemEntity', str]] = Field(
         default=None,
         description="A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.",

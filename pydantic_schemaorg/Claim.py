@@ -23,7 +23,7 @@ class Claim(CreativeWork):
     See: https://schema.org/Claim
     Model depth: 3
     """
-    type_: str = Field(default="Claim", alias='@type', const=True)
+    type_: str = Field(default="Claim", alias='@type', frozen=True)
     firstAppearance: Optional[Union[List[Union['CreativeWork', str]], 'CreativeWork', str]] = Field(
         default=None,
         description="Indicates the first known occurence of a [[Claim]] in some [[CreativeWork]].",

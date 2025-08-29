@@ -11,5 +11,5 @@ class WearableMeasurementSleeve(WearableMeasurementTypeEnumeration):
     See: https://schema.org/WearableMeasurementSleeve
     Model depth: 6
     """
-    type_: str = Field(default="WearableMeasurementSleeve", alias='@type', const=True)
+    type_: str = Field(default="WearableMeasurementSleeve", alias='@type', frozen=True)
     

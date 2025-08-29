@@ -16,7 +16,7 @@ class InteractionCounter(StructuredValue):
     See: https://schema.org/InteractionCounter
     Model depth: 4
     """
-    type_: str = Field(default="InteractionCounter", alias='@type', const=True)
+    type_: str = Field(default="InteractionCounter", alias='@type', frozen=True)
     userInteractionCount: Optional[Union[List[Union[int, 'Integer', str]], int, 'Integer', str]] = Field(
         default=None,
         description="The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.",

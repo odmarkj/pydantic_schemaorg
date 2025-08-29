@@ -17,7 +17,7 @@ class Vehicle(Product):
     See: https://schema.org/Vehicle
     Model depth: 3
     """
-    type_: str = Field(default="Vehicle", alias='@type', const=True)
+    type_: str = Field(default="Vehicle", alias='@type', frozen=True)
     meetsEmissionStandard: Optional[Union[List[Union[AnyUrl, 'URL', str, 'Text', 'QualitativeValue']], AnyUrl, 'URL', str, 'Text', 'QualitativeValue']] = Field(
         default=None,
         description="Indicates that the vehicle meets the respective emission standard.",

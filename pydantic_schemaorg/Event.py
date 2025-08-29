@@ -18,7 +18,7 @@ class Event(Thing):
     See: https://schema.org/Event
     Model depth: 2
     """
-    type_: str = Field(default="Event", alias='@type', const=True)
+    type_: str = Field(default="Event", alias='@type', frozen=True)
     subEvent: Optional[Union[List[Union['Event', str]], 'Event', str]] = Field(
         default=None,
         description="An Event that is part of this event. For example, a conference event includes many presentations,"

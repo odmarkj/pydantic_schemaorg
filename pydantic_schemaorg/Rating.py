@@ -15,7 +15,7 @@ class Rating(Intangible):
     See: https://schema.org/Rating
     Model depth: 3
     """
-    type_: str = Field(default="Rating", alias='@type', const=True)
+    type_: str = Field(default="Rating", alias='@type', frozen=True)
     worstRating: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str, 'Text']], StrictInt, StrictFloat, 'Number', str, 'Text']] = Field(
         default=None,
         description="The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.",

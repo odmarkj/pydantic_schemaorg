@@ -19,7 +19,7 @@ class Suite(Accommodation):
     See: https://schema.org/Suite
     Model depth: 4
     """
-    type_: str = Field(default="Suite", alias='@type', const=True)
+    type_: str = Field(default="Suite", alias='@type', frozen=True)
     numberOfRooms: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]], StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]] = Field(
         default=None,
         description="The number of rooms (excluding bathrooms and closets) of the accommodation or lodging"

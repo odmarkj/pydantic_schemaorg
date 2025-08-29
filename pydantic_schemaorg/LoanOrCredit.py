@@ -16,7 +16,7 @@ class LoanOrCredit(FinancialProduct):
     See: https://schema.org/LoanOrCredit
     Model depth: 5
     """
-    type_: str = Field(default="LoanOrCredit", alias='@type', const=True)
+    type_: str = Field(default="LoanOrCredit", alias='@type', frozen=True)
     loanRepaymentForm: Optional[Union[List[Union['RepaymentSpecification', str]], 'RepaymentSpecification', str]] = Field(
         default=None,
         description="A form of paying back money previously borrowed from a lender. Repayment usually takes"

@@ -14,7 +14,7 @@ class MusicRecording(CreativeWork):
     See: https://schema.org/MusicRecording
     Model depth: 3
     """
-    type_: str = Field(default="MusicRecording", alias='@type', const=True)
+    type_: str = Field(default="MusicRecording", alias='@type', frozen=True)
     inPlaylist: Optional[Union[List[Union['MusicPlaylist', str]], 'MusicPlaylist', str]] = Field(
         default=None,
         description="The playlist to which this recording belongs.",

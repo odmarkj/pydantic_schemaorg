@@ -18,7 +18,7 @@ class ShippingRateSettings(StructuredValue):
     See: https://schema.org/ShippingRateSettings
     Model depth: 4
     """
-    type_: str = Field(default="ShippingRateSettings", alias='@type', const=True)
+    type_: str = Field(default="ShippingRateSettings", alias='@type', frozen=True)
     shippingLabel: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within"

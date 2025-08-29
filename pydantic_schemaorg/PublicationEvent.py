@@ -17,7 +17,7 @@ class PublicationEvent(Event):
     See: https://schema.org/PublicationEvent
     Model depth: 3
     """
-    type_: str = Field(default="PublicationEvent", alias='@type', const=True)
+    type_: str = Field(default="PublicationEvent", alias='@type', frozen=True)
     publishedBy: Optional[Union[List[Union['Person', 'Organization', str]], 'Person', 'Organization', str]] = Field(
         default=None,
         description="An agent associated with the publication event.",

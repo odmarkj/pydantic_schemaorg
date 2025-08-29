@@ -16,7 +16,7 @@ class Organization(Thing):
     See: https://schema.org/Organization
     Model depth: 2
     """
-    type_: str = Field(default="Organization", alias='@type', const=True)
+    type_: str = Field(default="Organization", alias='@type', frozen=True)
     subOrganization: Optional[Union[List[Union['Organization', str]], 'Organization', str]] = Field(
         default=None,
         description="A relationship between two organizations where the first includes the second, e.g.,"

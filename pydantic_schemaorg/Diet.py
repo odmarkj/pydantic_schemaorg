@@ -16,7 +16,7 @@ class Diet(LifestyleModification, CreativeWork):
     See: https://schema.org/Diet
     Model depth: 3
     """
-    type_: str = Field(default="Diet", alias='@type', const=True)
+    type_: str = Field(default="Diet", alias='@type', frozen=True)
     risks: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="Specific physiologic risks associated to the diet plan.",

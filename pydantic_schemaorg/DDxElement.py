@@ -15,7 +15,7 @@ class DDxElement(MedicalIntangible):
     See: https://schema.org/DDxElement
     Model depth: 4
     """
-    type_: str = Field(default="DDxElement", alias='@type', const=True)
+    type_: str = Field(default="DDxElement", alias='@type', frozen=True)
     diagnosis: Optional[Union[List[Union['MedicalCondition', str]], 'MedicalCondition', str]] = Field(
         default=None,
         description="One or more alternative conditions considered in the differential diagnosis process"

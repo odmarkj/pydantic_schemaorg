@@ -14,7 +14,7 @@ class MusicComposition(CreativeWork):
     See: https://schema.org/MusicComposition
     Model depth: 3
     """
-    type_: str = Field(default="MusicComposition", alias='@type', const=True)
+    type_: str = Field(default="MusicComposition", alias='@type', frozen=True)
     composer: Optional[Union[List[Union['Person', 'Organization', str]], 'Person', 'Organization', str]] = Field(
         default=None,
         description="The person or organization who wrote a composition, or who is the composer of a work performed"

@@ -16,7 +16,7 @@ class MovieTheater(EntertainmentBusiness, CivicStructure):
     See: https://schema.org/MovieTheater
     Model depth: 4
     """
-    type_: str = Field(default="MovieTheater", alias='@type', const=True)
+    type_: str = Field(default="MovieTheater", alias='@type', frozen=True)
     screenCount: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="The number of screens in the movie theater.",

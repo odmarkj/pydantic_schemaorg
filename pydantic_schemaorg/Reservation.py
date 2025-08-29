@@ -19,7 +19,7 @@ class Reservation(Intangible):
     See: https://schema.org/Reservation
     Model depth: 3
     """
-    type_: str = Field(default="Reservation", alias='@type', const=True)
+    type_: str = Field(default="Reservation", alias='@type', frozen=True)
     reservationId: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="A unique identifier for the reservation.",

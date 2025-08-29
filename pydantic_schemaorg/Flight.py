@@ -15,7 +15,7 @@ class Flight(Trip):
     See: https://schema.org/Flight
     Model depth: 4
     """
-    type_: str = Field(default="Flight", alias='@type', const=True)
+    type_: str = Field(default="Flight", alias='@type', frozen=True)
     boardingPolicy: Optional[Union[List[Union['BoardingPolicyType', str]], 'BoardingPolicyType', str]] = Field(
         default=None,
         description="The type of boarding policy used by the airline (e.g. zone-based or group-based).",

@@ -14,7 +14,7 @@ class CookAction(CreateAction):
     See: https://schema.org/CookAction
     Model depth: 4
     """
-    type_: str = Field(default="CookAction", alias='@type', const=True)
+    type_: str = Field(default="CookAction", alias='@type', frozen=True)
     recipe: Optional[Union[List[Union['Recipe', str]], 'Recipe', str]] = Field(
         default=None,
         description="A sub property of instrument. The recipe/instructions used to perform the action.",

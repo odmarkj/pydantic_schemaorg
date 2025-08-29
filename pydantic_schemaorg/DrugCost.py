@@ -20,7 +20,7 @@ class DrugCost(MedicalEntity):
     See: https://schema.org/DrugCost
     Model depth: 3
     """
-    type_: str = Field(default="DrugCost", alias='@type', const=True)
+    type_: str = Field(default="DrugCost", alias='@type', frozen=True)
     costCategory: Optional[Union[List[Union['DrugCostCategory', str]], 'DrugCostCategory', str]] = Field(
         default=None,
         description="The category of cost, such as wholesale, retail, reimbursement cap, etc.",

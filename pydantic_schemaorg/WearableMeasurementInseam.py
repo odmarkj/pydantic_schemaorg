@@ -11,5 +11,5 @@ class WearableMeasurementInseam(WearableMeasurementTypeEnumeration):
     See: https://schema.org/WearableMeasurementInseam
     Model depth: 6
     """
-    type_: str = Field(default="WearableMeasurementInseam", alias='@type', const=True)
+    type_: str = Field(default="WearableMeasurementInseam", alias='@type', frozen=True)
     

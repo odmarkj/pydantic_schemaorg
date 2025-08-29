@@ -17,7 +17,7 @@ class PaymentCard(FinancialProduct, PaymentMethod):
     See: https://schema.org/PaymentCard
     Model depth: 5
     """
-    type_: str = Field(default="PaymentCard", alias='@type', const=True)
+    type_: str = Field(default="PaymentCard", alias='@type', frozen=True)
     contactlessPayment: Optional[Union[List[Union[StrictBool, 'Boolean', str]], StrictBool, 'Boolean', str]] = Field(
         default=None,
         description="A secure method for consumers to purchase products or services via debit, credit or smartcards"

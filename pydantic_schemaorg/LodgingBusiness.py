@@ -16,7 +16,7 @@ class LodgingBusiness(LocalBusiness):
     See: https://schema.org/LodgingBusiness
     Model depth: 4
     """
-    type_: str = Field(default="LodgingBusiness", alias='@type', const=True)
+    type_: str = Field(default="LodgingBusiness", alias='@type', frozen=True)
     amenityFeature: Optional[Union[List[Union['LocationFeatureSpecification', str]], 'LocationFeatureSpecification', str]] = Field(
         default=None,
         description="An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic"

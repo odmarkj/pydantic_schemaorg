@@ -14,7 +14,7 @@ class LoseAction(AchieveAction):
     See: https://schema.org/LoseAction
     Model depth: 4
     """
-    type_: str = Field(default="LoseAction", alias='@type', const=True)
+    type_: str = Field(default="LoseAction", alias='@type', frozen=True)
     winner: Optional[Union[List[Union['Person', str]], 'Person', str]] = Field(
         default=None,
         description="A sub property of participant. The winner of the action.",

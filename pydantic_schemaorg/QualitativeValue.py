@@ -15,7 +15,7 @@ class QualitativeValue(Enumeration):
     See: https://schema.org/QualitativeValue
     Model depth: 4
     """
-    type_: str = Field(default="QualitativeValue", alias='@type', const=True)
+    type_: str = Field(default="QualitativeValue", alias='@type', frozen=True)
     lesser: Optional[Union[List[Union['QualitativeValue', str]], 'QualitativeValue', str]] = Field(
         default=None,
         description="This ordering relation for qualitative values indicates that the subject is lesser"

@@ -15,7 +15,7 @@ class MonetaryGrant(Grant):
     See: https://schema.org/MonetaryGrant
     Model depth: 4
     """
-    type_: str = Field(default="MonetaryGrant", alias='@type', const=True)
+    type_: str = Field(default="MonetaryGrant", alias='@type', frozen=True)
     funder: Optional[Union[List[Union['Person', 'Organization', str]], 'Person', 'Organization', str]] = Field(
         default=None,
         description="A person or organization that supports (sponsors) something through some kind of financial"

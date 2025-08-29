@@ -14,7 +14,7 @@ class MusicAlbum(MusicPlaylist):
     See: https://schema.org/MusicAlbum
     Model depth: 4
     """
-    type_: str = Field(default="MusicAlbum", alias='@type', const=True)
+    type_: str = Field(default="MusicAlbum", alias='@type', frozen=True)
     albumProductionType: Optional[Union[List[Union['MusicAlbumProductionType', str]], 'MusicAlbumProductionType', str]] = Field(
         default=None,
         description="Classification of the album by it's type of content: soundtrack, live album, studio"

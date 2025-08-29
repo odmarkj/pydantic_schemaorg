@@ -17,7 +17,7 @@ class BedDetails(Intangible):
     See: https://schema.org/BedDetails
     Model depth: 3
     """
-    type_: str = Field(default="BedDetails", alias='@type', const=True)
+    type_: str = Field(default="BedDetails", alias='@type', frozen=True)
     numberOfBeds: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.",

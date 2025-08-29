@@ -15,7 +15,7 @@ class PropertyValueSpecification(Intangible):
     See: https://schema.org/PropertyValueSpecification
     Model depth: 3
     """
-    type_: str = Field(default="PropertyValueSpecification", alias='@type', const=True)
+    type_: str = Field(default="PropertyValueSpecification", alias='@type', frozen=True)
     multipleValues: Optional[Union[List[Union[StrictBool, 'Boolean', str]], StrictBool, 'Boolean', str]] = Field(
         default=None,
         description="Whether multiple values are allowed for the property. Default is false.",

@@ -15,7 +15,7 @@ class HealthPlanCostSharingSpecification(Intangible):
     See: https://schema.org/HealthPlanCostSharingSpecification
     Model depth: 3
     """
-    type_: str = Field(default="HealthPlanCostSharingSpecification", alias='@type', const=True)
+    type_: str = Field(default="HealthPlanCostSharingSpecification", alias='@type', frozen=True)
     healthPlanCoinsuranceOption: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed"

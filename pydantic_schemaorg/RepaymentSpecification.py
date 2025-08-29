@@ -15,7 +15,7 @@ class RepaymentSpecification(StructuredValue):
     See: https://schema.org/RepaymentSpecification
     Model depth: 4
     """
-    type_: str = Field(default="RepaymentSpecification", alias='@type', const=True)
+    type_: str = Field(default="RepaymentSpecification", alias='@type', frozen=True)
     loanPaymentAmount: Optional[Union[List[Union['MonetaryAmount', str]], 'MonetaryAmount', str]] = Field(
         default=None,
         description="The amount of money to pay in a single payment.",

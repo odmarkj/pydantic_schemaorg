@@ -11,5 +11,5 @@ class BodyMeasurementInsideLeg(BodyMeasurementTypeEnumeration):
     See: https://schema.org/BodyMeasurementInsideLeg
     Model depth: 6
     """
-    type_: str = Field(default="BodyMeasurementInsideLeg", alias='@type', const=True)
+    type_: str = Field(default="BodyMeasurementInsideLeg", alias='@type', frozen=True)
     

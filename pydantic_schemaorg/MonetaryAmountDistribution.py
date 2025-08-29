@@ -14,7 +14,7 @@ class MonetaryAmountDistribution(QuantitativeValueDistribution):
     See: https://schema.org/MonetaryAmountDistribution
     Model depth: 5
     """
-    type_: str = Field(default="MonetaryAmountDistribution", alias='@type', const=True)
+    type_: str = Field(default="MonetaryAmountDistribution", alias='@type', frozen=True)
     currency: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="The currency in which the monetary amount is expressed. Use standard formats: [ISO 4217"

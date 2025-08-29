@@ -12,5 +12,5 @@ class MixedEventAttendanceMode(EventAttendanceModeEnumeration):
     See: https://schema.org/MixedEventAttendanceMode
     Model depth: 5
     """
-    type_: str = Field(default="MixedEventAttendanceMode", alias='@type', const=True)
+    type_: str = Field(default="MixedEventAttendanceMode", alias='@type', frozen=True)
     

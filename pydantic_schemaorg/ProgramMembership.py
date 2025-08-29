@@ -16,7 +16,7 @@ class ProgramMembership(Intangible):
     See: https://schema.org/ProgramMembership
     Model depth: 3
     """
-    type_: str = Field(default="ProgramMembership", alias='@type', const=True)
+    type_: str = Field(default="ProgramMembership", alias='@type', frozen=True)
     membershipNumber: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="A unique identifier for the membership.",

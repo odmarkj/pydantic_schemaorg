@@ -19,7 +19,7 @@ class Action(Thing):
     See: https://schema.org/Action
     Model depth: 2
     """
-    type_: str = Field(default="Action", alias='@type', const=True)
+    type_: str = Field(default="Action", alias='@type', frozen=True)
     result: Optional[Union[List[Union['Thing', str]], 'Thing', str]] = Field(
         default=None,
         description="The result produced in the action. e.g. John wrote *a book*.",

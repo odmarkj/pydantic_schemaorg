@@ -20,7 +20,7 @@ class Course(LearningResource, CreativeWork):
     See: https://schema.org/Course
     Model depth: 3
     """
-    type_: str = Field(default="Course", alias='@type', const=True)
+    type_: str = Field(default="Course", alias='@type', frozen=True)
     numberOfCredits: Optional[Union[List[Union[int, 'Integer', 'StructuredValue', str]], int, 'Integer', 'StructuredValue', str]] = Field(
         default=None,
         description="The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.",

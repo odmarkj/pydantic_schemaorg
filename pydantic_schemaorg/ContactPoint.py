@@ -14,7 +14,7 @@ class ContactPoint(StructuredValue):
     See: https://schema.org/ContactPoint
     Model depth: 4
     """
-    type_: str = Field(default="ContactPoint", alias='@type', const=True)
+    type_: str = Field(default="ContactPoint", alias='@type', frozen=True)
     areaServed: Optional[Union[List[Union[str, 'Text', 'Place', 'AdministrativeArea', 'GeoShape']], str, 'Text', 'Place', 'AdministrativeArea', 'GeoShape']] = Field(
         default=None,
         description="The geographic area where a service or offered item is provided.",

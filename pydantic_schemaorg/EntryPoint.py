@@ -15,7 +15,7 @@ class EntryPoint(Intangible):
     See: https://schema.org/EntryPoint
     Model depth: 3
     """
-    type_: str = Field(default="EntryPoint", alias='@type', const=True)
+    type_: str = Field(default="EntryPoint", alias='@type', frozen=True)
     contentType: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="The supported content type(s) for an EntryPoint response.",

@@ -15,7 +15,7 @@ class Question(Comment):
     See: https://schema.org/Question
     Model depth: 4
     """
-    type_: str = Field(default="Question", alias='@type', const=True)
+    type_: str = Field(default="Question", alias='@type', frozen=True)
     eduQuestionType: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates"

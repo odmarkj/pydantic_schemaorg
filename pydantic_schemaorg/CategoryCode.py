@@ -15,7 +15,7 @@ class CategoryCode(DefinedTerm):
     See: https://schema.org/CategoryCode
     Model depth: 4
     """
-    type_: str = Field(default="CategoryCode", alias='@type', const=True)
+    type_: str = Field(default="CategoryCode", alias='@type', frozen=True)
     codeValue: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="A short textual code that uniquely identifies the value.",

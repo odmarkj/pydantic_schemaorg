@@ -17,7 +17,7 @@ class Order(Intangible):
     See: https://schema.org/Order
     Model depth: 3
     """
-    type_: str = Field(default="Order", alias='@type', const=True)
+    type_: str = Field(default="Order", alias='@type', frozen=True)
     orderDate: Optional[Union[List[Union[datetime, 'DateTime', date, 'Date', str]], datetime, 'DateTime', date, 'Date', str]] = Field(
         default=None,
         description="Date order was placed.",

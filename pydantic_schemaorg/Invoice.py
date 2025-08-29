@@ -16,7 +16,7 @@ class Invoice(Intangible):
     See: https://schema.org/Invoice
     Model depth: 3
     """
-    type_: str = Field(default="Invoice", alias='@type', const=True)
+    type_: str = Field(default="Invoice", alias='@type', frozen=True)
     paymentDue: Optional[Union[List[Union[datetime, 'DateTime', str]], datetime, 'DateTime', str]] = Field(
         default=None,
         description="The date that payment is due.",

@@ -15,7 +15,7 @@ class NewsMediaOrganization(Organization):
     See: https://schema.org/NewsMediaOrganization
     Model depth: 3
     """
-    type_: str = Field(default="NewsMediaOrganization", alias='@type', const=True)
+    type_: str = Field(default="NewsMediaOrganization", alias='@type', frozen=True)
     actionableFeedbackPolicy: Optional[Union[List[Union[AnyUrl, 'URL', 'CreativeWork', str]], AnyUrl, 'URL', 'CreativeWork', str]] = Field(
         default=None,
         description="For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement"

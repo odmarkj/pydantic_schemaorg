@@ -14,7 +14,7 @@ class CommentAction(CommunicateAction):
     See: https://schema.org/CommentAction
     Model depth: 5
     """
-    type_: str = Field(default="CommentAction", alias='@type', const=True)
+    type_: str = Field(default="CommentAction", alias='@type', frozen=True)
     resultComment: Optional[Union[List[Union['Comment', str]], 'Comment', str]] = Field(
         default=None,
         description="A sub property of result. The Comment created or sent as a result of this action.",

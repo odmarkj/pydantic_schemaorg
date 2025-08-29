@@ -19,7 +19,7 @@ class WebPage(CreativeWork):
     See: https://schema.org/WebPage
     Model depth: 3
     """
-    type_: str = Field(default="WebPage", alias='@type', const=True)
+    type_: str = Field(default="WebPage", alias='@type', frozen=True)
     significantLink: Optional[Union[List[Union[AnyUrl, 'URL', str]], AnyUrl, 'URL', str]] = Field(
         default=None,
         description="One of the more significant URLs on the page. Typically, these are the non-navigation"

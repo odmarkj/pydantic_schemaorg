@@ -17,7 +17,7 @@ class Product(Thing):
     See: https://schema.org/Product
     Model depth: 2
     """
-    type_: str = Field(default="Product", alias='@type', const=True)
+    type_: str = Field(default="Product", alias='@type', frozen=True)
     pattern: Optional[Union[List[Union[str, 'Text', 'DefinedTerm']], str, 'Text', 'DefinedTerm']] = Field(
         default=None,
         description="A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'."

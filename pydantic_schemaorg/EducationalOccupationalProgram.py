@@ -20,7 +20,7 @@ class EducationalOccupationalProgram(Intangible):
     See: https://schema.org/EducationalOccupationalProgram
     Model depth: 3
     """
-    type_: str = Field(default="EducationalOccupationalProgram", alias='@type', const=True)
+    type_: str = Field(default="EducationalOccupationalProgram", alias='@type', frozen=True)
     timeToComplete: Optional[Union[List[Union['Duration', str]], 'Duration', str]] = Field(
         default=None,
         description="The expected length of time to complete the program if attending full-time.",

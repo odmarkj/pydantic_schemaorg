@@ -16,7 +16,7 @@ class ParcelDelivery(Intangible):
     See: https://schema.org/ParcelDelivery
     Model depth: 3
     """
-    type_: str = Field(default="ParcelDelivery", alias='@type', const=True)
+    type_: str = Field(default="ParcelDelivery", alias='@type', frozen=True)
     trackingNumber: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="Shipper tracking number.",

@@ -15,7 +15,7 @@ class TravelAction(MoveAction):
     See: https://schema.org/TravelAction
     Model depth: 4
     """
-    type_: str = Field(default="TravelAction", alias='@type', const=True)
+    type_: str = Field(default="TravelAction", alias='@type', frozen=True)
     distance: Optional[Union[List[Union['Distance', str]], 'Distance', str]] = Field(
         default=None,
         description="The distance travelled, e.g. exercising or travelling.",

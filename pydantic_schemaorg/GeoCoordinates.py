@@ -15,7 +15,7 @@ class GeoCoordinates(StructuredValue):
     See: https://schema.org/GeoCoordinates
     Model depth: 4
     """
-    type_: str = Field(default="GeoCoordinates", alias='@type', const=True)
+    type_: str = Field(default="GeoCoordinates", alias='@type', frozen=True)
     postalCode: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="The postal code. For example, 94043.",

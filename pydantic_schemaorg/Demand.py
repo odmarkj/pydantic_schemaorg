@@ -17,7 +17,7 @@ class Demand(Intangible):
     See: https://schema.org/Demand
     Model depth: 3
     """
-    type_: str = Field(default="Demand", alias='@type', const=True)
+    type_: str = Field(default="Demand", alias='@type', frozen=True)
     includesObject: Optional[Union[List[Union['TypeAndQuantityNode', str]], 'TypeAndQuantityNode', str]] = Field(
         default=None,
         description="This links to a node or nodes indicating the exact quantity of the products included in"

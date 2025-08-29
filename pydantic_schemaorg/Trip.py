@@ -15,7 +15,7 @@ class Trip(Intangible):
     See: https://schema.org/Trip
     Model depth: 3
     """
-    type_: str = Field(default="Trip", alias='@type', const=True)
+    type_: str = Field(default="Trip", alias='@type', frozen=True)
     offers: Optional[Union[List[Union['Offer', 'Demand', str]], 'Offer', 'Demand', str]] = Field(
         default=None,
         description="An offer to provide this item&#x2014;for example, an offer to sell a product, rent the"

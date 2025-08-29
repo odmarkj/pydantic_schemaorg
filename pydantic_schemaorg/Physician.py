@@ -15,7 +15,7 @@ class Physician(MedicalBusiness, MedicalOrganization):
     See: https://schema.org/Physician
     Model depth: 4
     """
-    type_: str = Field(default="Physician", alias='@type', const=True)
+    type_: str = Field(default="Physician", alias='@type', frozen=True)
     medicalSpecialty: Optional[Union[List[Union['MedicalSpecialty', str]], 'MedicalSpecialty', str]] = Field(
         default=None,
         description="A medical specialty of the provider.",

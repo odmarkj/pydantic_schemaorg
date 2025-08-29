@@ -15,7 +15,7 @@ class RsvpAction(InformAction):
     See: https://schema.org/RsvpAction
     Model depth: 6
     """
-    type_: str = Field(default="RsvpAction", alias='@type', const=True)
+    type_: str = Field(default="RsvpAction", alias='@type', frozen=True)
     additionalNumberOfGuests: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="If responding yes, the number of guests who will attend in addition to the invitee.",

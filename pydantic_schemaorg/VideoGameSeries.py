@@ -15,7 +15,7 @@ class VideoGameSeries(CreativeWorkSeries):
     See: https://schema.org/VideoGameSeries
     Model depth: 4
     """
-    type_: str = Field(default="VideoGameSeries", alias='@type', const=True)
+    type_: str = Field(default="VideoGameSeries", alias='@type', frozen=True)
     actors: Optional[Union[List[Union['Person', str]], 'Person', str]] = Field(
         default=None,
         description="An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual"

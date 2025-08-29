@@ -15,7 +15,7 @@ class DataDownload(MediaObject):
     See: https://schema.org/DataDownload
     Model depth: 4
     """
-    type_: str = Field(default="DataDownload", alias='@type', const=True)
+    type_: str = Field(default="DataDownload", alias='@type', frozen=True)
     measurementTechnique: Optional[Union[List[Union[AnyUrl, 'URL', str, 'Text']], AnyUrl, 'URL', str, 'Text']] = Field(
         default=None,
         description="A technique or technology used in a [[Dataset]] (or [[DataDownload]], [[DataCatalog]]),"

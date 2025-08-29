@@ -14,7 +14,7 @@ class EndorseAction(ReactAction):
     See: https://schema.org/EndorseAction
     Model depth: 5
     """
-    type_: str = Field(default="EndorseAction", alias='@type', const=True)
+    type_: str = Field(default="EndorseAction", alias='@type', frozen=True)
     endorsee: Optional[Union[List[Union['Person', 'Organization', str]], 'Person', 'Organization', str]] = Field(
         default=None,
         description="A sub property of participant. The person/organization being supported.",

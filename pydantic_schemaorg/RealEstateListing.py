@@ -17,7 +17,7 @@ class RealEstateListing(WebPage):
     See: https://schema.org/RealEstateListing
     Model depth: 4
     """
-    type_: str = Field(default="RealEstateListing", alias='@type', const=True)
+    type_: str = Field(default="RealEstateListing", alias='@type', frozen=True)
     leaseLength: Optional[Union[List[Union['Duration', 'QuantitativeValue', str]], 'Duration', 'QuantitativeValue', str]] = Field(
         default=None,
         description="Length of the lease for some [[Accommodation]], either particular to some [[Offer]]"

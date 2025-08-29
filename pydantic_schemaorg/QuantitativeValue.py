@@ -15,7 +15,7 @@ class QuantitativeValue(StructuredValue):
     See: https://schema.org/QuantitativeValue
     Model depth: 4
     """
-    type_: str = Field(default="QuantitativeValue", alias='@type', const=True)
+    type_: str = Field(default="QuantitativeValue", alias='@type', frozen=True)
     minValue: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="The lower value of some characteristic or property.",

@@ -18,7 +18,7 @@ class PriceSpecification(StructuredValue):
     See: https://schema.org/PriceSpecification
     Model depth: 4
     """
-    type_: str = Field(default="PriceSpecification", alias='@type', const=True)
+    type_: str = Field(default="PriceSpecification", alias='@type', frozen=True)
     valueAddedTaxIncluded: Optional[Union[List[Union[StrictBool, 'Boolean', str]], StrictBool, 'Boolean', str]] = Field(
         default=None,
         description="Specifies whether the applicable value-added tax (VAT) is included in the price specification"

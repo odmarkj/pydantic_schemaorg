@@ -15,7 +15,7 @@ class UnitPriceSpecification(PriceSpecification):
     See: https://schema.org/UnitPriceSpecification
     Model depth: 5
     """
-    type_: str = Field(default="UnitPriceSpecification", alias='@type', const=True)
+    type_: str = Field(default="UnitPriceSpecification", alias='@type', frozen=True)
     billingStart: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="Specifies after how much time this price (or price component) becomes valid and billing"

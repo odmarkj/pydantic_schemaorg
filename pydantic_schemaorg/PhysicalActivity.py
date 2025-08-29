@@ -17,7 +17,7 @@ class PhysicalActivity(LifestyleModification):
     See: https://schema.org/PhysicalActivity
     Model depth: 4
     """
-    type_: str = Field(default="PhysicalActivity", alias='@type', const=True)
+    type_: str = Field(default="PhysicalActivity", alias='@type', frozen=True)
     epidemiology: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="The characteristics of associated patients, such as age, gender, race etc.",

@@ -15,7 +15,7 @@ class CreativeWorkSeason(CreativeWork):
     See: https://schema.org/CreativeWorkSeason
     Model depth: 3
     """
-    type_: str = Field(default="CreativeWorkSeason", alias='@type', const=True)
+    type_: str = Field(default="CreativeWorkSeason", alias='@type', frozen=True)
     trailer: Optional[Union[List[Union['VideoObject', str]], 'VideoObject', str]] = Field(
         default=None,
         description="The trailer of a movie or tv/radio series, season, episode, etc.",

@@ -19,7 +19,7 @@ class CDCPMDRecord(StructuredValue):
     See: https://schema.org/CDCPMDRecord
     Model depth: 4
     """
-    type_: str = Field(default="CDCPMDRecord", alias='@type', const=True)
+    type_: str = Field(default="CDCPMDRecord", alias='@type', frozen=True)
     cvdNumVentUse: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.",

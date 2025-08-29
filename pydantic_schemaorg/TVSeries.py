@@ -16,7 +16,7 @@ class TVSeries(CreativeWorkSeries, CreativeWork):
     See: https://schema.org/TVSeries
     Model depth: 3
     """
-    type_: str = Field(default="TVSeries", alias='@type', const=True)
+    type_: str = Field(default="TVSeries", alias='@type', frozen=True)
     actors: Optional[Union[List[Union['Person', str]], 'Person', str]] = Field(
         default=None,
         description="An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual"

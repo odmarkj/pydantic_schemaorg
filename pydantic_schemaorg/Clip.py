@@ -15,7 +15,7 @@ class Clip(CreativeWork):
     See: https://schema.org/Clip
     Model depth: 3
     """
-    type_: str = Field(default="Clip", alias='@type', const=True)
+    type_: str = Field(default="Clip", alias='@type', frozen=True)
     partOfSeason: Optional[Union[List[Union['CreativeWorkSeason', str]], 'CreativeWorkSeason', str]] = Field(
         default=None,
         description="The season to which this episode belongs.",

@@ -16,7 +16,7 @@ class Person(Thing):
     See: https://schema.org/Person
     Model depth: 2
     """
-    type_: str = Field(default="Person", alias='@type', const=True)
+    type_: str = Field(default="Person", alias='@type', frozen=True)
     contactPoint: Optional[Union[List[Union['ContactPoint', str]], 'ContactPoint', str]] = Field(
         default=None,
         description="A contact point for a person or organization.",

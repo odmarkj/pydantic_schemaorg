@@ -16,7 +16,7 @@ class ActionAccessSpecification(Intangible):
     See: https://schema.org/ActionAccessSpecification
     Model depth: 3
     """
-    type_: str = Field(default="ActionAccessSpecification", alias='@type', const=True)
+    type_: str = Field(default="ActionAccessSpecification", alias='@type', frozen=True)
     category: Optional[Union[List[Union[AnyUrl, 'URL', str, 'Text', 'PhysicalActivityCategory', 'Thing']], AnyUrl, 'URL', str, 'Text', 'PhysicalActivityCategory', 'Thing']] = Field(
         default=None,
         description="A category for the item. Greater signs or slashes can be used to informally indicate a"

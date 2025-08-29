@@ -15,7 +15,7 @@ class QuantitativeValueDistribution(StructuredValue):
     See: https://schema.org/QuantitativeValueDistribution
     Model depth: 4
     """
-    type_: str = Field(default="QuantitativeValueDistribution", alias='@type', const=True)
+    type_: str = Field(default="QuantitativeValueDistribution", alias='@type', frozen=True)
     percentile75: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="The 75th percentile value.",

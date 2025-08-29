@@ -14,7 +14,7 @@ class MusicPlaylist(CreativeWork):
     See: https://schema.org/MusicPlaylist
     Model depth: 3
     """
-    type_: str = Field(default="MusicPlaylist", alias='@type', const=True)
+    type_: str = Field(default="MusicPlaylist", alias='@type', frozen=True)
     numTracks: Optional[Union[List[Union[int, 'Integer', str]], int, 'Integer', str]] = Field(
         default=None,
         description="The number of tracks in this album or playlist.",

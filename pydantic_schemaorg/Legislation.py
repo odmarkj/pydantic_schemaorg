@@ -17,7 +17,7 @@ class Legislation(CreativeWork):
     See: https://schema.org/Legislation
     Model depth: 3
     """
-    type_: str = Field(default="Legislation", alias='@type', const=True)
+    type_: str = Field(default="Legislation", alias='@type', frozen=True)
     legislationPassedBy: Optional[Union[List[Union['Person', 'Organization', str]], 'Person', 'Organization', str]] = Field(
         default=None,
         description="The person or organization that originally passed or made the law : typically parliament"

@@ -15,7 +15,7 @@ class ArchiveComponent(CreativeWork):
     See: https://schema.org/ArchiveComponent
     Model depth: 3
     """
-    type_: str = Field(default="ArchiveComponent", alias='@type', const=True)
+    type_: str = Field(default="ArchiveComponent", alias='@type', frozen=True)
     itemLocation: Optional[Union[List[Union[str, 'Text', 'PostalAddress', 'Place']], str, 'Text', 'PostalAddress', 'Place']] = Field(
         default=None,
         description="Current location of the item.",

@@ -23,7 +23,7 @@ class Grant(Intangible):
     See: https://schema.org/Grant
     Model depth: 3
     """
-    type_: str = Field(default="Grant", alias='@type', const=True)
+    type_: str = Field(default="Grant", alias='@type', frozen=True)
     fundedItem: Optional[Union[List[Union['Thing', str]], 'Thing', str]] = Field(
         default=None,
         description="Indicates an item funded or sponsored through a [[Grant]].",

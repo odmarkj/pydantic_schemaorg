@@ -17,7 +17,7 @@ class Quotation(CreativeWork):
     See: https://schema.org/Quotation
     Model depth: 3
     """
-    type_: str = Field(default="Quotation", alias='@type', const=True)
+    type_: str = Field(default="Quotation", alias='@type', frozen=True)
     spokenByCharacter: Optional[Union[List[Union['Person', 'Organization', str]], 'Person', 'Organization', str]] = Field(
         default=None,
         description="The (e.g. fictional) character, Person or Organization to whom the quotation is attributed"

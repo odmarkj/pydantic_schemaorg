@@ -61,7 +61,7 @@ class SpecialAnnouncement(CreativeWork):
     See: https://schema.org/SpecialAnnouncement
     Model depth: 3
     """
-    type_: str = Field(default="SpecialAnnouncement", alias='@type', const=True)
+    type_: str = Field(default="SpecialAnnouncement", alias='@type', frozen=True)
     announcementLocation: Optional[Union[List[Union['LocalBusiness', 'CivicStructure', str]], 'LocalBusiness', 'CivicStructure', str]] = Field(
         default=None,
         description="Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the"

@@ -21,7 +21,7 @@ class TouristDestination(Place):
     See: https://schema.org/TouristDestination
     Model depth: 3
     """
-    type_: str = Field(default="TouristDestination", alias='@type', const=True)
+    type_: str = Field(default="TouristDestination", alias='@type', frozen=True)
     includesAttraction: Optional[Union[List[Union['TouristAttraction', str]], 'TouristAttraction', str]] = Field(
         default=None,
         description="Attraction located at destination.",

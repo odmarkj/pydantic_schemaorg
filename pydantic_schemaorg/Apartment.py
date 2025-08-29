@@ -17,7 +17,7 @@ class Apartment(Accommodation):
     See: https://schema.org/Apartment
     Model depth: 4
     """
-    type_: str = Field(default="Apartment", alias='@type', const=True)
+    type_: str = Field(default="Apartment", alias='@type', frozen=True)
     numberOfRooms: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]], StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]] = Field(
         default=None,
         description="The number of rooms (excluding bathrooms and closets) of the accommodation or lodging"

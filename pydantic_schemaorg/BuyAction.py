@@ -15,7 +15,7 @@ class BuyAction(TradeAction):
     See: https://schema.org/BuyAction
     Model depth: 4
     """
-    type_: str = Field(default="BuyAction", alias='@type', const=True)
+    type_: str = Field(default="BuyAction", alias='@type', frozen=True)
     vendor: Optional[Union[List[Union['Person', 'Organization', str]], 'Person', 'Organization', str]] = Field(
         default=None,
         description="'vendor' is an earlier term for 'seller'.",

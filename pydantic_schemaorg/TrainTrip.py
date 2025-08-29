@@ -14,7 +14,7 @@ class TrainTrip(Trip):
     See: https://schema.org/TrainTrip
     Model depth: 4
     """
-    type_: str = Field(default="TrainTrip", alias='@type', const=True)
+    type_: str = Field(default="TrainTrip", alias='@type', frozen=True)
     arrivalStation: Optional[Union[List[Union['TrainStation', str]], 'TrainStation', str]] = Field(
         default=None,
         description="The station where the train trip ends.",

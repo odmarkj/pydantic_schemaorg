@@ -15,7 +15,7 @@ class ItemList(Intangible):
     See: https://schema.org/ItemList
     Model depth: 3
     """
-    type_: str = Field(default="ItemList", alias='@type', const=True)
+    type_: str = Field(default="ItemList", alias='@type', frozen=True)
     itemListElement: Optional[Union[List[Union[str, 'Text', 'ListItem', 'Thing']], str, 'Text', 'ListItem', 'Thing']] = Field(
         default=None,
         description="For itemListElement values, you can use simple strings (e.g. \"Peter\", \"Paul\","

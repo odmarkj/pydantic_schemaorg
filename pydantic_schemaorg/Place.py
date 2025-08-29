@@ -15,7 +15,7 @@ class Place(Thing):
     See: https://schema.org/Place
     Model depth: 2
     """
-    type_: str = Field(default="Place", alias='@type', const=True)
+    type_: str = Field(default="Place", alias='@type', frozen=True)
     geo: Optional[Union[List[Union['GeoCoordinates', 'GeoShape', str]], 'GeoCoordinates', 'GeoShape', str]] = Field(
         default=None,
         description="The geo coordinates of the place.",

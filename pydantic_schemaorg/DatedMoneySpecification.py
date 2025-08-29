@@ -19,7 +19,7 @@ class DatedMoneySpecification(StructuredValue):
     See: https://schema.org/DatedMoneySpecification
     Model depth: 4
     """
-    type_: str = Field(default="DatedMoneySpecification", alias='@type', const=True)
+    type_: str = Field(default="DatedMoneySpecification", alias='@type', frozen=True)
     amount: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'MonetaryAmount', str]], StrictInt, StrictFloat, 'Number', 'MonetaryAmount', str]] = Field(
         default=None,
         description="The amount of money.",

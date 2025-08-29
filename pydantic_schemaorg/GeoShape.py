@@ -18,7 +18,7 @@ class GeoShape(StructuredValue):
     See: https://schema.org/GeoShape
     Model depth: 4
     """
-    type_: str = Field(default="GeoShape", alias='@type', const=True)
+    type_: str = Field(default="GeoShape", alias='@type', frozen=True)
     polygon: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="A polygon is the area enclosed by a point-to-point path for which the starting and ending"

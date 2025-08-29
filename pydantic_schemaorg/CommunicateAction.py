@@ -15,7 +15,7 @@ class CommunicateAction(InteractAction):
     See: https://schema.org/CommunicateAction
     Model depth: 4
     """
-    type_: str = Field(default="CommunicateAction", alias='@type', const=True)
+    type_: str = Field(default="CommunicateAction", alias='@type', frozen=True)
     about: Optional[Union[List[Union['Thing', str]], 'Thing', str]] = Field(
         default=None,
         description="The subject matter of the content.",

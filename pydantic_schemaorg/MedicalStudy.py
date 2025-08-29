@@ -21,7 +21,7 @@ class MedicalStudy(MedicalEntity):
     See: https://schema.org/MedicalStudy
     Model depth: 3
     """
-    type_: str = Field(default="MedicalStudy", alias='@type', const=True)
+    type_: str = Field(default="MedicalStudy", alias='@type', frozen=True)
     studyLocation: Optional[Union[List[Union['AdministrativeArea', str]], 'AdministrativeArea', str]] = Field(
         default=None,
         description="The location in which the study is taking/took place.",

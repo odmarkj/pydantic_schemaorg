@@ -19,7 +19,7 @@ class MediaObject(CreativeWork):
     See: https://schema.org/MediaObject
     Model depth: 3
     """
-    type_: str = Field(default="MediaObject", alias='@type', const=True)
+    type_: str = Field(default="MediaObject", alias='@type', frozen=True)
     bitrate: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="The bitrate of the media object.",

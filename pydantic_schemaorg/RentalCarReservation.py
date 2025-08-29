@@ -16,7 +16,7 @@ class RentalCarReservation(Reservation):
     See: https://schema.org/RentalCarReservation
     Model depth: 4
     """
-    type_: str = Field(default="RentalCarReservation", alias='@type', const=True)
+    type_: str = Field(default="RentalCarReservation", alias='@type', frozen=True)
     pickupLocation: Optional[Union[List[Union['Place', str]], 'Place', str]] = Field(
         default=None,
         description="Where a taxi will pick up a passenger or a rental car can be picked up.",

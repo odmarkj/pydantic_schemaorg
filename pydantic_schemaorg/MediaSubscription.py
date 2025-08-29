@@ -14,7 +14,7 @@ class MediaSubscription(Intangible):
     See: https://schema.org/MediaSubscription
     Model depth: 3
     """
-    type_: str = Field(default="MediaSubscription", alias='@type', const=True)
+    type_: str = Field(default="MediaSubscription", alias='@type', frozen=True)
     expectsAcceptanceOf: Optional[Union[List[Union['Offer', str]], 'Offer', str]] = Field(
         default=None,
         description="An Offer which must be accepted before the user can perform the Action. For example, the"

@@ -16,7 +16,7 @@ class TypeAndQuantityNode(StructuredValue):
     See: https://schema.org/TypeAndQuantityNode
     Model depth: 4
     """
-    type_: str = Field(default="TypeAndQuantityNode", alias='@type', const=True)
+    type_: str = Field(default="TypeAndQuantityNode", alias='@type', frozen=True)
     businessFunction: Optional[Union[List[Union['BusinessFunction', str]], 'BusinessFunction', str]] = Field(
         default=None,
         description="The business function (e.g. sell, lease, repair, dispose) of the offer or component"

@@ -14,7 +14,7 @@ class MedicalEntity(Thing):
     See: https://schema.org/MedicalEntity
     Model depth: 2
     """
-    type_: str = Field(default="MedicalEntity", alias='@type', const=True)
+    type_: str = Field(default="MedicalEntity", alias='@type', frozen=True)
     medicineSystem: Optional[Union[List[Union['MedicineSystem', str]], 'MedicineSystem', str]] = Field(
         default=None,
         description="The system of medicine that includes this MedicalEntity, for example 'evidence-based',"

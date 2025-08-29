@@ -16,7 +16,7 @@ class HowToDirection(ListItem, CreativeWork):
     See: https://schema.org/HowToDirection
     Model depth: 3
     """
-    type_: str = Field(default="HowToDirection", alias='@type', const=True)
+    type_: str = Field(default="HowToDirection", alias='@type', frozen=True)
     duringMedia: Optional[Union[List[Union[AnyUrl, 'URL', 'MediaObject', str]], AnyUrl, 'URL', 'MediaObject', str]] = Field(
         default=None,
         description="A media object representing the circumstances while performing this direction.",

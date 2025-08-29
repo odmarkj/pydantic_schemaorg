@@ -15,7 +15,7 @@ class SportsEvent(Event):
     See: https://schema.org/SportsEvent
     Model depth: 3
     """
-    type_: str = Field(default="SportsEvent", alias='@type', const=True)
+    type_: str = Field(default="SportsEvent", alias='@type', frozen=True)
     sport: Optional[Union[List[Union[AnyUrl, 'URL', str, 'Text']], AnyUrl, 'URL', str, 'Text']] = Field(
         default=None,
         description="A type of sport (e.g. Baseball).",

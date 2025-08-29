@@ -14,7 +14,7 @@ class DigitalDocumentPermission(Intangible):
     See: https://schema.org/DigitalDocumentPermission
     Model depth: 3
     """
-    type_: str = Field(default="DigitalDocumentPermission", alias='@type', const=True)
+    type_: str = Field(default="DigitalDocumentPermission", alias='@type', frozen=True)
     permissionType: Optional[Union[List[Union['DigitalDocumentPermissionType', str]], 'DigitalDocumentPermissionType', str]] = Field(
         default=None,
         description="The type of permission granted the person, organization, or audience.",

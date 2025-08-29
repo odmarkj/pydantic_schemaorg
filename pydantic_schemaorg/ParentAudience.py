@@ -15,7 +15,7 @@ class ParentAudience(PeopleAudience):
     See: https://schema.org/ParentAudience
     Model depth: 5
     """
-    type_: str = Field(default="ParentAudience", alias='@type', const=True)
+    type_: str = Field(default="ParentAudience", alias='@type', frozen=True)
     childMinAge: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', str]], StrictInt, StrictFloat, 'Number', str]] = Field(
         default=None,
         description="Minimal age of the child.",

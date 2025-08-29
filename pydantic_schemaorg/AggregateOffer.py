@@ -19,7 +19,7 @@ class AggregateOffer(Offer):
     See: https://schema.org/AggregateOffer
     Model depth: 4
     """
-    type_: str = Field(default="AggregateOffer", alias='@type', const=True)
+    type_: str = Field(default="AggregateOffer", alias='@type', frozen=True)
     offers: Optional[Union[List[Union['Offer', 'Demand', str]], 'Offer', 'Demand', str]] = Field(
         default=None,
         description="An offer to provide this item&#x2014;for example, an offer to sell a product, rent the"

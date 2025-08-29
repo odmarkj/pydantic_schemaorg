@@ -16,7 +16,7 @@ class InvestmentOrDeposit(FinancialProduct):
     See: https://schema.org/InvestmentOrDeposit
     Model depth: 5
     """
-    type_: str = Field(default="InvestmentOrDeposit", alias='@type', const=True)
+    type_: str = Field(default="InvestmentOrDeposit", alias='@type', frozen=True)
     amount: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'MonetaryAmount', str]], StrictInt, StrictFloat, 'Number', 'MonetaryAmount', str]] = Field(
         default=None,
         description="The amount of money.",

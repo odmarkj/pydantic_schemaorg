@@ -18,7 +18,7 @@ class UserComments(UserInteraction):
     See: https://schema.org/UserComments
     Model depth: 4
     """
-    type_: str = Field(default="UserComments", alias='@type', const=True)
+    type_: str = Field(default="UserComments", alias='@type', frozen=True)
     discusses: Optional[Union[List[Union['CreativeWork', str]], 'CreativeWork', str]] = Field(
         default=None,
         description="Specifies the CreativeWork associated with the UserComment.",

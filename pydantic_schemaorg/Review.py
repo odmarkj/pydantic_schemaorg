@@ -14,7 +14,7 @@ class Review(CreativeWork):
     See: https://schema.org/Review
     Model depth: 3
     """
-    type_: str = Field(default="Review", alias='@type', const=True)
+    type_: str = Field(default="Review", alias='@type', frozen=True)
     associatedMediaReview: Optional[Union[List[Union['Review', str]], 'Review', str]] = Field(
         default=None,
         description="An associated [[MediaReview]], related by specific common content, topic or claim."

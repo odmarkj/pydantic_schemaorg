@@ -11,5 +11,5 @@ class ReadPermission(DigitalDocumentPermissionType):
     See: https://schema.org/ReadPermission
     Model depth: 5
     """
-    type_: str = Field(default="ReadPermission", alias='@type', const=True)
+    type_: str = Field(default="ReadPermission", alias='@type', frozen=True)
     

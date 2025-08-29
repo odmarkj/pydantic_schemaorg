@@ -15,7 +15,7 @@ class SingleFamilyResidence(House):
     See: https://schema.org/SingleFamilyResidence
     Model depth: 5
     """
-    type_: str = Field(default="SingleFamilyResidence", alias='@type', const=True)
+    type_: str = Field(default="SingleFamilyResidence", alias='@type', frozen=True)
     numberOfRooms: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]], StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]] = Field(
         default=None,
         description="The number of rooms (excluding bathrooms and closets) of the accommodation or lodging"

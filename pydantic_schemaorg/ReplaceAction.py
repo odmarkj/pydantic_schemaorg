@@ -14,7 +14,7 @@ class ReplaceAction(UpdateAction):
     See: https://schema.org/ReplaceAction
     Model depth: 4
     """
-    type_: str = Field(default="ReplaceAction", alias='@type', const=True)
+    type_: str = Field(default="ReplaceAction", alias='@type', frozen=True)
     replacer: Optional[Union[List[Union['Thing', str]], 'Thing', str]] = Field(
         default=None,
         description="A sub property of object. The object that replaces.",

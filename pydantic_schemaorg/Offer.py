@@ -24,7 +24,7 @@ class Offer(Intangible):
     See: https://schema.org/Offer
     Model depth: 3
     """
-    type_: str = Field(default="Offer", alias='@type', const=True)
+    type_: str = Field(default="Offer", alias='@type', frozen=True)
     hasMeasurement: Optional[Union[List[Union['QuantitativeValue', str]], 'QuantitativeValue', str]] = Field(
         default=None,
         description="A product measurement, for example the inseam of pants, the wheel size of a bicycle, or"

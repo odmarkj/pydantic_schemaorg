@@ -15,7 +15,7 @@ class EmployeeRole(OrganizationRole):
     See: https://schema.org/EmployeeRole
     Model depth: 5
     """
-    type_: str = Field(default="EmployeeRole", alias='@type', const=True)
+    type_: str = Field(default="EmployeeRole", alias='@type', frozen=True)
     salaryCurrency: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) )"

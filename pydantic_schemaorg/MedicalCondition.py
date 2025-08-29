@@ -16,7 +16,7 @@ class MedicalCondition(MedicalEntity):
     See: https://schema.org/MedicalCondition
     Model depth: 3
     """
-    type_: str = Field(default="MedicalCondition", alias='@type', const=True)
+    type_: str = Field(default="MedicalCondition", alias='@type', frozen=True)
     epidemiology: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="The characteristics of associated patients, such as age, gender, race etc.",

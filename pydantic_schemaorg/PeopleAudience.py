@@ -15,7 +15,7 @@ class PeopleAudience(Audience):
     See: https://schema.org/PeopleAudience
     Model depth: 4
     """
-    type_: str = Field(default="PeopleAudience", alias='@type', const=True)
+    type_: str = Field(default="PeopleAudience", alias='@type', frozen=True)
     suggestedGender: Optional[Union[List[Union[str, 'Text', 'GenderType']], str, 'Text', 'GenderType']] = Field(
         default=None,
         description="The suggested gender of the intended person or audience, for example \"male\", \"female\","

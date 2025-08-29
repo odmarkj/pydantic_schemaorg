@@ -14,7 +14,7 @@ class MusicRelease(MusicPlaylist):
     See: https://schema.org/MusicRelease
     Model depth: 4
     """
-    type_: str = Field(default="MusicRelease", alias='@type', const=True)
+    type_: str = Field(default="MusicRelease", alias='@type', frozen=True)
     releaseOf: Optional[Union[List[Union['MusicAlbum', str]], 'MusicAlbum', str]] = Field(
         default=None,
         description="The album this is a release of.",

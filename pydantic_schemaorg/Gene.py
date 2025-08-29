@@ -17,7 +17,7 @@ class Gene(BioChemEntity):
     See: https://schema.org/Gene
     Model depth: 3
     """
-    type_: str = Field(default="Gene", alias='@type', const=True)
+    type_: str = Field(default="Gene", alias='@type', frozen=True)
     hasBioPolymerSequence: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of"

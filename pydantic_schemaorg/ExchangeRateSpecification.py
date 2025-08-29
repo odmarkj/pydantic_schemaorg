@@ -15,7 +15,7 @@ class ExchangeRateSpecification(StructuredValue):
     See: https://schema.org/ExchangeRateSpecification
     Model depth: 4
     """
-    type_: str = Field(default="ExchangeRateSpecification", alias='@type', const=True)
+    type_: str = Field(default="ExchangeRateSpecification", alias='@type', frozen=True)
     exchangeRateSpread: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'MonetaryAmount', str]], StrictInt, StrictFloat, 'Number', 'MonetaryAmount', str]] = Field(
         default=None,
         description="The difference between the price at which a broker or other intermediary buys and sells"

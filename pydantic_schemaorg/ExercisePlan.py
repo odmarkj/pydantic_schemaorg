@@ -17,7 +17,7 @@ class ExercisePlan(PhysicalActivity, CreativeWork):
     See: https://schema.org/ExercisePlan
     Model depth: 3
     """
-    type_: str = Field(default="ExercisePlan", alias='@type', const=True)
+    type_: str = Field(default="ExercisePlan", alias='@type', frozen=True)
     repetitions: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]], StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]] = Field(
         default=None,
         description="Number of times one should repeat the activity.",

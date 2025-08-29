@@ -18,7 +18,7 @@ class GeoCircle(GeoShape):
     See: https://schema.org/GeoCircle
     Model depth: 5
     """
-    type_: str = Field(default="GeoCircle", alias='@type', const=True)
+    type_: str = Field(default="GeoCircle", alias='@type', frozen=True)
     geoMidpoint: Optional[Union[List[Union['GeoCoordinates', str]], 'GeoCoordinates', str]] = Field(
         default=None,
         description="Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.",

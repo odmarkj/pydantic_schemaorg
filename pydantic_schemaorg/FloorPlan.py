@@ -21,7 +21,7 @@ class FloorPlan(Intangible):
     See: https://schema.org/FloorPlan
     Model depth: 3
     """
-    type_: str = Field(default="FloorPlan", alias='@type', const=True)
+    type_: str = Field(default="FloorPlan", alias='@type', frozen=True)
     numberOfBedrooms: Optional[Union[List[Union[StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]], StrictInt, StrictFloat, 'Number', 'QuantitativeValue', str]] = Field(
         default=None,
         description="The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]]"

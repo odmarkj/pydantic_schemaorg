@@ -15,7 +15,7 @@ class Service(Intangible):
     See: https://schema.org/Service
     Model depth: 3
     """
-    type_: str = Field(default="Service", alias='@type', const=True)
+    type_: str = Field(default="Service", alias='@type', frozen=True)
     offers: Optional[Union[List[Union['Offer', 'Demand', str]], 'Offer', 'Demand', str]] = Field(
         default=None,
         description="An offer to provide this item&#x2014;for example, an offer to sell a product, rent the"

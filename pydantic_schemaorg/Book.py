@@ -15,7 +15,7 @@ class Book(CreativeWork):
     See: https://schema.org/Book
     Model depth: 3
     """
-    type_: str = Field(default="Book", alias='@type', const=True)
+    type_: str = Field(default="Book", alias='@type', frozen=True)
     illustrator: Optional[Union[List[Union['Person', str]], 'Person', str]] = Field(
         default=None,
         description="The illustrator of the book.",

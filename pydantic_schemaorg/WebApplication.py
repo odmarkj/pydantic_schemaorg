@@ -14,7 +14,7 @@ class WebApplication(SoftwareApplication):
     See: https://schema.org/WebApplication
     Model depth: 4
     """
-    type_: str = Field(default="WebApplication", alias='@type', const=True)
+    type_: str = Field(default="WebApplication", alias='@type', frozen=True)
     browserRequirements: Optional[Union[List[Union[str, 'Text']], str, 'Text']] = Field(
         default=None,
         description="Specifies browser requirements in human-readable text. For example, 'requires HTML5"

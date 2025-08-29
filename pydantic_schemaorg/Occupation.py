@@ -15,7 +15,7 @@ class Occupation(Intangible):
     See: https://schema.org/Occupation
     Model depth: 3
     """
-    type_: str = Field(default="Occupation", alias='@type', const=True)
+    type_: str = Field(default="Occupation", alias='@type', frozen=True)
     experienceRequirements: Optional[Union[List[Union[str, 'Text', 'OccupationalExperienceRequirements']], str, 'Text', 'OccupationalExperienceRequirements']] = Field(
         default=None,
         description="Description of skills and experience needed for the position or Occupation.",
