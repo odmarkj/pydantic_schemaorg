@@ -17,7 +17,7 @@ class CreativeWork(Thing):
     See: https://schema.org/CreativeWork
     Model depth: 2
     """
-    type_: str = Field(default="CreativeWork", alias='@type', const=True)
+    type_: str = Field(default="CreativeWork", alias='@type', frozen=True)
     pattern: Optional[Union[List[Union[str, 'Text', 'DefinedTerm']], str, 'Text', 'DefinedTerm']] = Field(
         default=None,
         description="A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'."
